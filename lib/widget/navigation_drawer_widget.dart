@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gems_records/provider/navigation_provider.dart';
 import 'package:provider/provider.dart';
-
+import 'package:gems_records/model/navigation_item.dart';
 import '../model/navigation_item.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   const NavigationDrawerWidget({Key? key}) : super(key: key);
 
+  // ignore: prefer_const_constructors
   static final padding = EdgeInsets.symmetric(horizontal: 20);
 
   @override
@@ -77,6 +78,7 @@ class NavigationDrawerWidget extends StatelessWidget {
     final currentItem = provider.navigationItem;
     final isSelected = item == currentItem;
 
+    // ignore: prefer_const_declarations
     final color = Colors.red;
 
     return Material(
